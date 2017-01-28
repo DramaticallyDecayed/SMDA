@@ -1,0 +1,2025 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#accessesService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#accessesService">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#accessessURL -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#accessessURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#URL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#callsServices -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#callsServices">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#describesPatient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#describesPatient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalRecord"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Patient"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasAppointment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasAppointment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalAppointment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalRecord"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasData">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntry"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasDiagnosis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasDiagnosis">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnosis"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasDiagnosticsAct -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasDiagnosticsAct">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnostics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasDoctor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasDoctor">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Doctor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalStaff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Nurse"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Surgeon"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasEntry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasEntry">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Array"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntry"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasEpisode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasEpisode">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalRecord"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasMeasuringResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasMeasuringResult">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#AcidAlkaliBalance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Analysis"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BloodChemistry"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnostics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Echocardiography"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Electrocardiography"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FunctionalTest"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Leukogram"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Urinalysis"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasMedicalAct -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasMedicalAct">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#AcidAlkaliBalance"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Analysis"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BloodChemistry"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnostics"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Echocardiography"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Electrocardiography"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FunctionalTest"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Leukogram"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalAppointment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalManipulation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Urinalysis"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasPreDefinedValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasPreDefinedValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PreDefinedEnum"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasPrescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasPrescription">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DrugTreatment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalAppointment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SurgicalTreament"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TreatmentRegime"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasProcess">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessChain"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasRestrictions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasRestrictions">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Restriction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasRuleApplied -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasRuleApplied">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasStaff -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasStaff">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Administrator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Contributor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Department"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Doctor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Managerial"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalStaff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Nurse"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Staff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Surgeon"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#includesDrug -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#includesDrug">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Drug"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DrugTreatment"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#includesProcesses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#includesProcesses">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessChain"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TransformationProcess"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#includesService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#includesService">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#includesTransformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#includesTransformation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#producesOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#producesOutput">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Array"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CombinedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntry"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MeasuringUnit"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PreDefinedEnum"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextNote"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextualData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedValue"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#URL"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#reliesOnGroups -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#reliesOnGroups">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ScenarioServiceEntities"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#requiresInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#requiresInput">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Array"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CombinedData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntry"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MeasuringUnit"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PreDefinedEnum"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextNote"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextualData"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedValue"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#URL"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="&owl;topObjectProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#executesQuery -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#executesQuery">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#URL"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasAge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Patient"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasCredentials -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasCredentials">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasEndDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DrugTreatment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SurgicalTreament"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Treatment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TreatmentRegime"/>
+        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Administrator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Contributor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Department"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Doctor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Managerial"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalParticipant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalStaff"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Nurse"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Patient"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessChain"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Staff"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Surgeon"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasRestriction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasRestriction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <rdfs:range rdf:resource="&xsd;unsignedInt"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasRuleReference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasRuleReference">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasSequence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasSequence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntry"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasStartDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DrugTreatment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SurgicalTreament"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Treatment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TreatmentRegime"/>
+        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasTimestamp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#AcidAlkaliBalance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Analysis"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BloodChemistry"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DescriptiveEntity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnostics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Echocardiography"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Electrocardiography"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FunctionalTest"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Leukogram"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalAppointment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalManipulation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PatientState"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Symptom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedText"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedValue"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Urinalysis"/>
+        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasURL">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#hasValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MeasuringUnit"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextNote"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedText"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedValue"/>
+        <rdfs:range rdf:resource="&owl;rational"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="&owl;topDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#URL"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#AcidAlkaliBalance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#AcidAlkaliBalance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Administrator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Administrator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Analysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Analysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnostics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Array -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Array">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CombinedData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BloodChemistry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BloodChemistry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CombinedData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CombinedData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Contributor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Contributor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CombinedData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Department">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DescriptiveEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DescriptiveEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnostics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnostics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalManipulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Doctor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Doctor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Drug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Drug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TreatmentRegime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DrugTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DrugTreatment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TreatmentRegime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Echocardiography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Echocardiography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FunctionalTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Electrocardiography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Electrocardiography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FunctionalTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FunctionalTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FunctionalTest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnostics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Indicator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Indicator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Leukogram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Leukogram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Managerial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Managerial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MeasuringUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MeasuringUnit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextualData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalAppointment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalAppointment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalManipulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalManipulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalParticipant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalParticipant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalRecord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalStaff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalStaff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Staff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Nurse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Nurse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Patient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalParticipant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PatientState -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PatientState">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DescriptiveEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PreDefinedEnum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PreDefinedEnum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessChain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessChain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Query -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Query">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextualData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Restriction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Restriction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ScenarioServiceEntities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ScenarioServiceEntities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ScenarioServiceEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Staff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalParticipant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Surgeon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Surgeon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalStaff"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SurgicalTreament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SurgicalTreament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TreatmentRegime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Symptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DescriptiveEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextNote -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextNote">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextualData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextualData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextualData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedText">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CombinedData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedValue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedValue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CombinedData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TransformationProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TransformationProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Treatment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalManipulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TreatmentRegime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TreatmentRegime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#URL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#URL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TextualData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Urinalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Urinalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BicubicInterpolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BicubicInterpolation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <hasName xml:lang="en">BicubicInterpolation</hasName>
+        <hasLocation xml:lang="en">http://77.234.215.179:617/</hasLocation>
+        <hasCredentials xml:lang="en">login:password</hasCredentials>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FilledParameterRow"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparceParameterRow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BicubicInterpolationService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BicubicInterpolationService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BotkinSheetScenarioEntities -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BotkinSheetScenarioEntities">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ScenarioServiceEntities"/>
+        <reliesOnGroups rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculationServiceGroup"/>
+        <reliesOnGroups rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CorrelationServiceGroup"/>
+        <reliesOnGroups rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataQueryServiceGroup"/>
+        <reliesOnGroups rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataStorageServiceGroup"/>
+        <reliesOnGroups rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#InterpotaionServiceGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CalculateComplexIndicator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CalculateComplexIndicator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <hasSequence xml:lang="en">3</hasSequence>
+        <includesTransformation rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Calculation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Calculation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <accessesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Complemention -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Complemention">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <accessesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Interpolation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <hasName xml:lang="en">ComplexIndicatorCalculation</hasName>
+        <hasLocation xml:lang="en">http://77.234.215.179:654/</hasLocation>
+        <hasCredentials xml:lang="en">login:password</hasCredentials>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Matrix"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculationChain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculationChain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessChain"/>
+        <hasProcess rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculationProcess"/>
+        <hasProcess rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataSampleQueryProcess"/>
+        <hasProcess rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataStorageProcess"/>
+        <hasProcess rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueCorrelationCalculationProcess"/>
+        <hasProcess rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueRowInterpolationProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculationProcess -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculationProcess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <hasSequence rdf:datatype="&xsd;unsignedInt">4</hasSequence>
+        <includesTransformation rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorTransformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculationServiceGroup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculationServiceGroup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <hasName rdf:datatype="&xsd;string">Thee group of services for calculation of complex indicators</hasName>
+        <hasName rdf:datatype="&xsd;string">complexIndicatorCalculationServiceGroup</hasName>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CompressedMatrix"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Indicator"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#IntegralIndicatorService"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#InternalLinksSumService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorChain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorChain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ProcessChain"/>
+        <hasProcess rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CalculateComplexIndicator"/>
+        <hasProcess rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ExcludeExcessParameters"/>
+        <hasProcess rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#InterpolateValueRow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorTransformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorTransformation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <accessesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculationServiceGroup"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CompressedMatrix"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Indicator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CompressedMatrix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CompressedMatrix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Array"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Correlation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Correlation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <hasName xml:lang="en">CorrelationServices</hasName>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#R_package"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CorrelationServiceGroup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CorrelationServiceGroup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <executesQuery rdf:datatype="&xsd;string">A group of services to calculate correlation rate between two collections of parameter rows</executesQuery>
+        <hasName rdf:datatype="&xsd;string">correlation ServiceGroup</hasName>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CompressedMatrix"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#KendallCorrelationCoefficientService"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#LinearCorrelationCoefficientService"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Matrix"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PirsonCorrelationService"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SpearmenCorrelationCoefficientService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CorrelativeMatrixCompressionTransformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CorrelativeMatrixCompressionTransformation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CompressedMatrix"/>
+        <accessesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CorrelationServiceGroup"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Matrix"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataQueryServiceGroup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataQueryServiceGroup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <hasDescription rdf:datatype="&xsd;string">A group of services for datastore connection to query data</hasDescription>
+        <hasName rdf:datatype="&xsd;string">dataQueryServiceGroup</hasName>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SPARQLDataQueryService"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SQLDataQueryService"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparqlSelectByPatientIdQuery"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SqlSelectByPatientIdQuery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataRowInterpolationTransformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataRowInterpolationTransformation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FilledParameterRow"/>
+        <accessesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#InterpotaionServiceGroup"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparceParameterRow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataSampleQueryProcess -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataSampleQueryProcess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <hasSequence rdf:datatype="&xsd;unsignedInt">1</hasSequence>
+        <accessesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataQueryServiceGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataStorageProcess -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataStorageProcess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <hasSequence rdf:datatype="&xsd;unsignedInt">5</hasSequence>
+        <accessesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataStorageServiceGroup"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataStorageServiceGroup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataStorageServiceGroup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <executesQuery rdf:datatype="&xsd;string"></executesQuery>
+        <hasDescription rdf:datatype="&xsd;string">A group of services for datastore connection to save data</hasDescription>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SPARQLDataStoreService"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SQLDataStoreService"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparqlSelectByPatientIdQuery"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SqlSelectByPatientIdQuery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnosis_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnosis_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnosis"/>
+        <hasValue rdf:datatype="&xsd;string">I20.8</hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode_379928 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode_379928">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode"/>
+        <hasDiagnosis rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Diagnosis_1"/>
+        <hasDiagnosticsAct rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Leukogram_1"/>
+        <describesPatient rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Patient_5952_A14"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ExcludeExcessParameters -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ExcludeExcessParameters">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <hasSequence xml:lang="en">2</hasSequence>
+        <includesTransformation rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Exclusion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Exclusion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Exclusion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Transformation"/>
+        <accessesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Correlation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FilledParameterRow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FilledParameterRow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Array"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Indicator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Indicator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result"/>
+        <hasName xml:lang="en">ComplexIndicator</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#IndicatorCalculation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#IndicatorCalculation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <hasName xml:lang="en">ComplexIndicatorCalculationService</hasName>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#IntamapInterpolationService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#IntamapInterpolationService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#IntegralIndicatorService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#IntegralIndicatorService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#InternalLinksSumService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#InternalLinksSumService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <hasRuleApplied rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#InterpolateValueRow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#InterpolateValueRow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <hasSequence xml:lang="en">1</hasSequence>
+        <includesTransformation rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Complemention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Interpolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Interpolation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <hasName xml:lang="en">InterpolationServiceGroup</hasName>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BicubicInterpolation"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SMDAInterpolation"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#intamap"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#InterpotaionServiceGroup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#InterpotaionServiceGroup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ServiceGroup"/>
+        <hasDescription rdf:datatype="&xsd;string">A group of services assessing the correlation rate between two rows of parameters</hasDescription>
+        <hasName rdf:datatype="&xsd;string">interpolationServiceGroup</hasName>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#BicubicInterpolationService"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FilledParameterRow"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#IntamapInterpolationService"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#LinearInterpolationService"/>
+        <includesService rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SmdaInterpolationService"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparceParameterRow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#JdbcUrl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#JdbcUrl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#URL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#KendallCorrelationCoefficientService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#KendallCorrelationCoefficientService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <hasRuleApplied rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Leukogram_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Leukogram_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Leukogram"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_1"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_10"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_11"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_12"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_13"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_14"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_15"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_16"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_17"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_18"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_19"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_2"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_20"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_21"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_22"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_23"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_24"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_3"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_4"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_5"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_6"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_7"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_8"/>
+        <hasMeasuringResult rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#LinearCorrelationCoefficientService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#LinearCorrelationCoefficientService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#LinearInterpolationService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#LinearInterpolationService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Matrix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Matrix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Array"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CompressedMatrix"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FilledParameterRow"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">hct</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">plt</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">rbc</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">rdw</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">rdw_cv</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">rdw_sd</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">adf</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">aptv</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">actv</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">wbc</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">limpho_perc</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">hgb</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">monocites_perc</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">neutrophil_perc</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">neutrophil_stick_perc</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">neutrophil_sya_perc</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">esr</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">mch</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">mchc</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">mcv</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">mpv</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">p_lcr</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">pct</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement"/>
+        <hasName rdf:datatype="&xsd;string">pdw</hasName>
+        <hasData rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalRecord_5952_A14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalRecord_5952_A14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MedicalRecord"/>
+        <hasEpisode rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Episode_379928"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MultidimentionalCompressionTransformation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MultidimentionalCompressionTransformation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TransformationProcess"/>
+        <hasName rdf:datatype="&xsd;string">multidimentionalCompressionTransformation</hasName>
+        <includesProcesses rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorCalculationChain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MultidimentionalDataCompression -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#MultidimentionalDataCompression">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TransformationProcess"/>
+        <hasName xml:lang="en">MultidimentionalDataCompression</hasName>
+        <includesProcesses rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ComplexIndicatorChain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ParameterRow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ParameterRow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Array"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_1"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_10"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_11"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_12"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_13"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_14"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_15"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_16"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_17"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_18"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_19"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_2"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_20"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_21"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_22"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_23"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_24"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_3"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_4"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_5"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_6"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_7"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_8"/>
+        <hasEntry rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Measurement_9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Patient_5952_A14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Patient_5952_A14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Patient"/>
+        <hasAge rdf:datatype="&xsd;integer">62</hasAge>
+        <hasName rdf:datatype="&xsd;string">dhjwlkdcjlsx jdkxm;lwkq;xm; qiqjx;qwklmqw</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PirsonCorrelationService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#PirsonCorrelationService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#R_package -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#R_package">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <hasName xml:lang="en">RPackageServices</hasName>
+        <hasLocation xml:lang="en">http://77.234.215.179:619/</hasLocation>
+        <hasCredentials xml:lang="en">login:password</hasCredentials>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FilledParameterRow"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FilledParameterRow"/>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparceParameterRow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Result"/>
+        <hasName xml:lang="en">CorrelatinRate</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule"/>
+        <hasRuleReference rdf:datatype="&xsd;string">@36823</hasRuleReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule"/>
+        <hasRuleReference rdf:datatype="&xsd;string">@36623</hasRuleReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule"/>
+        <hasRuleReference rdf:datatype="&xsd;string">@14987</hasRuleReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule"/>
+        <hasRuleReference rdf:datatype="&xsd;string">@23283</hasRuleReference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SMDAInterpolation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SMDAInterpolation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <hasName xml:lang="en">SMDAInternalInterpolation</hasName>
+        <hasLocation xml:lang="en">http://77.234.215.179:615</hasLocation>
+        <hasCredentials xml:lang="en">login:password</hasCredentials>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FilledParameterRow"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparceParameterRow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SPARQLDataQueryService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SPARQLDataQueryService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <accessessURL rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparqlEndpointUrl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SPARQLDataStoreService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SPARQLDataStoreService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <accessessURL rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparqlEndpointUrl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SQLDataQueryService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SQLDataQueryService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <accessessURL rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#JdbcUrl"/>
+        <hasRuleApplied rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SQLDataStoreService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SQLDataStoreService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <accessessURL rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#JdbcUrl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SmdaInterpolationService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SmdaInterpolationService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <hasRuleApplied rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Rule_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparceParameterRow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparceParameterRow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Array"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparqlEndpointUrl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparqlEndpointUrl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#URL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparqlSelectByPatientIdQuery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparqlSelectByPatientIdQuery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Query"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SpearmenCorrelationCoefficientService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SpearmenCorrelationCoefficientService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SqlSelectByPatientIdQuery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SqlSelectByPatientIdQuery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Query"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueCorrelationCalculationProcess -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueCorrelationCalculationProcess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <hasSequence rdf:datatype="&xsd;unsignedInt">3</hasSequence>
+        <includesTransformation rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#CorrelativeMatrixCompressionTransformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueRowInterpolationProcess -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueRowInterpolationProcess">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Process"/>
+        <hasSequence rdf:datatype="&xsd;unsignedInt">2</hasSequence>
+        <includesTransformation rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#DataRowInterpolationTransformation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#ValueWithDateTime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#TimestamppedValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#intamap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#intamap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#Service"/>
+        <hasName xml:lang="en">INTAMAPInterpolation</hasName>
+        <hasLocation xml:lang="en">http://77.234.215.179:610/</hasLocation>
+        <hasCredentials xml:lang="en">login:password</hasCredentials>
+        <producesOutput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#FilledParameterRow"/>
+        <requiresInput rdf:resource="http://www.semanticweb.org/system/ontologies/2016/10/untitled-ontology-3#SparceParameterRow"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
