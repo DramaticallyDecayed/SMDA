@@ -2,6 +2,7 @@ package dd.application;
 
 import dd.classification.LeastSquaresSignificanceSearcher;
 import dd.classification.SignificanceSearchResult;
+import dd.utils.DataUtils;
 import dd.utils.FolderReader;
 import dd.utils.SpecificFileReader;
 import org.apache.commons.math3.linear.RealMatrix;
@@ -52,7 +53,7 @@ public class FunctionalConstructor {
         for (String fileName : fileNames.keySet()) {
             double[][] data = SpecificFileReader.read(fileNames.get(fileName));
             double[][] correlation = calculateCorrelationMatrix(data);
-            Double[][] correlationMatrix = adaptData(correlation);
+            Double[][] correlationMatrix = DataUtils.fromPrimitive2ObjectArray(correlation);
             double initialLambda = 0.1;
             LeastSquaresSignificanceSearcher searcher = new LeastSquaresSignificanceSearcher();
             SignificanceSearchResult result =
@@ -62,19 +63,6 @@ public class FunctionalConstructor {
         return functionals;
     }
 
-    private Double[][] adaptData(double[][] correlation) {
-        Double[][] correlationMatrix = new Double[correlation.length][correlation.length];
-        for (int i = 0; i < correlation.length; i++) {
-            for (int j = 0; j < correlation[i].length; j++) {
-                if (i == j) {
-                    correlationMatrix[i][j] = null;
-                    continue;
-                }
-                correlationMatrix[i][j] = correlation[i][j];
-            }
-        }
-        return correlationMatrix;
-    }
 
     private double[][] calculateCorrelationMatrix(double[][] data) {
         RealMatrix realMatrix = new PearsonsCorrelation().computeCorrelationMatrix(data);

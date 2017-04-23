@@ -30,6 +30,9 @@ public class ClassificationResult {
                 if (other.getResult().containsKey(key)) {
                     List<Integer> curRes = result.get(key);
                     List<Integer> prevRes = other.getResult().get(key);
+                    if(curRes.size() != prevRes.size()){
+                        return false;
+                    }
                     for (int i = 0; i < curRes.size(); i++) {
                         if (curRes.get(i) != prevRes.get(i)) {
                             return false;

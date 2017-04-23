@@ -1,5 +1,7 @@
 package dd.classification;
 
+import dd.utils.DataUtils;
+
 import java.util.List;
 import java.util.Map;
 
@@ -26,6 +28,13 @@ public class LeastSquaresSignificanceSearcher {
                 previousResult = result;
             }
         }
+    }
+
+    public SignificanceSearchResult searchSignificance(double initialLambda, double[][] initialCorrelationMatrix) {
+        return searchSignificance(
+                initialLambda,
+                DataUtils.fromPrimitive2ObjectArray(initialCorrelationMatrix)
+        );
     }
 
     private double lambda2Significance(double lambda){
