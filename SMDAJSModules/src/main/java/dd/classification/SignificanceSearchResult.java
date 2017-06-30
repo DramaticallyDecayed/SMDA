@@ -1,9 +1,11 @@
 package dd.classification;
 
+import java.io.Serializable;
+
 /**
  * Created by Sergey on 20.04.2017.
  */
-public class SignificanceSearchResult {
+public class SignificanceSearchResult implements Serializable {
     private final double significance;
     private final ClassificationResult classificationResult;
 
@@ -19,5 +21,9 @@ public class SignificanceSearchResult {
 
     public ClassificationResult getClassificationResult() {
         return classificationResult;
+    }
+
+    public String toString() {
+        return "significance: " + significance + " " + classificationResult.toString();
     }
 }

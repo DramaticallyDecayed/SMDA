@@ -1,7 +1,12 @@
 package dd.utils;
 
 import dd.application.FunctionalConstructor;
+import dd.classification.ClassificationResult;
+import dd.classification.InternalLinkMaximizer;
+import dd.classification.LeastSquaresSignificanceSearcher;
 import dd.classification.SignificanceSearchResult;
+import org.apache.commons.math3.linear.RealMatrix;
+import org.apache.commons.math3.stat.correlation.PearsonsCorrelation;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
@@ -29,5 +34,28 @@ public class FunctionalConstructorTest {
 
             );
         }
+    }
+
+    @Test
+    public void testSingle() throws FileNotFoundException {
+        String path = TestCSVReader.class.getClassLoader().getResource("kr88").getPath();
+        double[][] data = SpecificFileReader.read(path);
+        double[][] correlation = calculateCorrelationMatrix(data);
+        Double[][] correlationMatrix = DataUtils.fromPrimitive2ObjectArray(correlation);
+        InternalLinkMaximizer maximizer = new InternalLinkMaximizer();
+        ClassificationResult result = maximizer.classify(0.2268171, correlationMatrix);
+        System.out.println(result.getFunctional());
+        System.out.println(result.getResult());
+
+
+        LeastSquaresSignificanceSearcher leastSquaresSignificanceSearcher = new LeastSquaresSignificanceSearcher();
+        SignificanceSearchResult significanceSearchResult =leastSquaresSignificanceSearcher.searchSignificance(0.0, correlationMatrix);
+        System.out.println(significanceSearchResult.getClassificationResult().getFunctional());
+
+    }
+
+    private double[][] calculateCorrelationMatrix(double[][] data) {
+        RealMatrix realMatrix = new PearsonsCorrelation().computeCorrelationMatrix(data);
+        return realMatrix.getData();
     }
 }

@@ -1,12 +1,13 @@
 package dd.classification;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
 /**
  * Created by Sergey on 20.04.2017.
  */
-public class ClassificationResult {
+public class ClassificationResult implements Serializable{
     private final double functional;
     private final Map<Integer, List<Integer>> result;
 
@@ -22,7 +23,6 @@ public class ClassificationResult {
     public Map<Integer, List<Integer>> getResult() {
         return result;
     }
-
 
     public boolean compareClassification(ClassificationResult other) {
         if (result.size() == other.getResult().size()) {
@@ -46,5 +46,9 @@ public class ClassificationResult {
             return false;
         }
         return true;
+    }
+
+    public String toString(){
+        return "functional: " + functional + " classification: " + result;
     }
 }
