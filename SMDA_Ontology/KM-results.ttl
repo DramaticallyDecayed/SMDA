@@ -1,8 +1,7 @@
-# baseURI: http://datafabric.cc//KM-results
+# baseURI: http://dramaticallydecayed.com/KM-results
 # imports: http://spinrdf.org/spl
 
-@prefix : <http://datafabric.cc//KM-results#> .
-@prefix KM-results: <http://datafabric.cc//KM-results#> .
+@prefix : <http://dramaticallydecayed.com/KM-results#> .
 @prefix arg: <http://spinrdf.org/arg#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,51 +11,51 @@
 @prefix spl: <http://spinrdf.org/spl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://datafabric.cc//KM-results>
+<http://dramaticallydecayed.com/KM-results>
   rdf:type owl:Ontology ;
   owl:imports <http://spinrdf.org/spl> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
-KM-results:Classification
+:Classification
   rdf:type owl:Class ;
   rdfs:subClassOf owl:Thing ;
 .
-KM-results:ComplexCharacteristic
+:ComplexCharacteristic
   rdf:type owl:Class ;
   rdfs:subClassOf owl:Thing ;
 .
-KM-results:batch-size
+:batch-size
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain KM-results:ComplexCharacteristic ;
+  rdfs:domain :ComplexCharacteristic ;
   rdfs:range xsd:integer ;
 .
-KM-results:day
+:day
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain KM-results:ComplexCharacteristic ;
+  rdfs:domain :ComplexCharacteristic ;
   rdfs:range xsd:integer ;
 .
-KM-results:functional
+:functional
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain KM-results:ComplexCharacteristic ;
+  rdfs:domain :ComplexCharacteristic ;
   rdfs:range xsd:float ;
 .
-KM-results:hasClassification
+:hasClassification
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain KM-results:ComplexCharacteristic ;
-  rdfs:range KM-results:Classification ;
+  rdfs:domain :ComplexCharacteristic ;
+  rdfs:range :Classification ;
 .
-KM-results:number
+:number
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain KM-results:Classification ;
+  rdfs:domain :Classification ;
   rdfs:range xsd:integer ;
 .
-KM-results:parameter
+:parameter
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain KM-results:Classification ;
+  rdfs:domain :Classification ;
   rdfs:range xsd:string ;
 .
-KM-results:significance
+:significance
   rdf:type owl:DatatypeProperty ;
-  rdfs:domain KM-results:ComplexCharacteristic ;
+  rdfs:domain :ComplexCharacteristic ;
   rdfs:range xsd:float ;
 .
